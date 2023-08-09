@@ -11,7 +11,7 @@ import chalk from 'chalk';
  
 
 // Function to generate a random password
-function generatePassword(length) {
+const generatePassword = (length) => {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
   const password = Array.from(crypto.randomFillSync(new Uint8Array(length)))
     .map((x) => characters[x % characters.length])
